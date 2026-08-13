@@ -10,6 +10,7 @@ __pycache__/
 !.env.example
 api_pentest_agent/.env
 api_pentest_agent/test_runs/
+api_pentest_agent/Reports/
 api_pentest_agent/.adk/
 *.log
 .DS_Store
