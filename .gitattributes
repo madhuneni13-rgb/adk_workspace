@@ -1,0 +1,4 @@
+api_pentest_agent/Reports/*.html linguist-generated=true
+api_pentest_agent/Reports/*.json linguist-generated=true
+api_pentest_agent/Reports/*.md linguist-generated=true
+api_pentest_agent/diagrams/*.svg linguist-generated=true
