@@ -26,6 +26,9 @@ llm_security/
 |       |-- LLM02/
 |       |-- LLM06/
 |       `-- LLM07/
+|-- garak/                  Git submodule
+|-- promptfoo/              Git submodule
+|-- pyrit/                  Git submodule
 `-- results/
     `-- baseline_results.md
 ```
@@ -51,3 +54,66 @@ No evidence is fabricated or inferred.
 The source Markdown files under
 `C:\Users\madhu\Downloads\LLM_security` were copied and consolidated; the
 original files remain unchanged.
+
+## Promptfoo
+
+Promptfoo is included as a Git submodule at `llm_security/promptfoo`.
+
+Clone this project with the submodule:
+
+```powershell
+git clone --recurse-submodules <repository-url>
+```
+
+For an existing clone:
+
+```powershell
+git submodule update --init --recursive
+```
+
+Promptfoo requires Node.js 22.22 or newer; Node.js 24 LTS is recommended. After
+installing Node.js, follow the setup instructions in `promptfoo/README.md`.
+
+## Garak
+
+NVIDIA Garak is included as a Git submodule at `llm_security/garak`. The same
+submodule clone and update commands shown above initialize both Promptfoo and
+Garak.
+
+Garak supports Python 3.11 through 3.13. Install it in a dedicated virtual or
+Conda environment to avoid mixing its dependencies with the API pentest agent:
+
+```powershell
+cd llm_security\garak
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -e .
+```
+
+Verify the installation with:
+
+```powershell
+python -m garak --list_probes
+```
+
+## PyRIT
+
+Microsoft PyRIT is included as a Git submodule at `llm_security/pyrit`. Python
+3.11 through 3.14 is supported; the workspace Python 3.12 runtime is
+compatible.
+
+For source development, use a dedicated environment and follow PyRIT's local
+development instructions:
+
+```powershell
+cd llm_security\pyrit
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -e .
+```
+
+PyRIT endpoint credentials belong in local environment configuration and must
+not be committed. See `pyrit/doc/getting_started/` for installation and
+configuration guidance.

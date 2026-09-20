@@ -1,0 +1,9 @@
+[submodule "llm_security/promptfoo"]
+	path = llm_security/promptfoo
+	url = https://github.com/promptfoo/promptfoo.git
+[submodule "llm_security/garak"]
+	path = llm_security/garak
+	url = https://github.com/NVIDIA/garak.git
+[submodule "llm_security/pyrit"]
+	path = llm_security/pyrit
+	url = https://github.com/microsoft/PyRIT.git
