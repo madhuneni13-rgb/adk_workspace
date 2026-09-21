@@ -1,0 +1,6 @@
+# Keeps each probe's prompt volume small so a run stays within the
+# agent's Gemini free-tier quota. Each probe is capped to this many
+# prompts (most garak probes respect soft_probe_prompt_cap).
+run:
+  generations: 1
+  soft_probe_prompt_cap: 8
