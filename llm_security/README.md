@@ -26,12 +26,18 @@ llm_security/
 |       |-- LLM02/
 |       |-- LLM06/
 |       `-- LLM07/
+|-- results/
+|   `-- baseline_results.md      Manual-test baseline only
+|-- coverage/                    Cross-tool OWASP LLM Top 10 summary
+|   |-- owasp_llm_coverage.png
+|   |-- owasp_llm_coverage_summary.md
+|   `-- generate_coverage_image.py
 |-- garak/                  Git submodule
-|-- promptfoo/              Git submodule
-|-- promptfoo-adk/          Local ADK provider and evaluation config
-|-- pyrit/                  Git submodule
-`-- results/
-    `-- baseline_results.md
+|-- garak-adk/               Local ADK bridge, run script, and results
+|-- promptfoo/               Git submodule
+|-- promptfoo-adk/           Local ADK provider, evaluation config, and results
+|-- pyrit/                   Git submodule
+`-- pyrit-adk/                Local ADK bridge, run script, and results
 ```
 
 ## Result Labels
