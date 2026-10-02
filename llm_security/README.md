@@ -51,16 +51,15 @@ llm_security/
 ## Evidence Status
 
 The baseline evidence directories are present for LLM02, LLM06, and LLM07.
-However, `C:\Users\madhu\Downloads\LLM_security\Evidence` currently contains no
+However, the original external evidence folder currently contains no
 discoverable files. The LLM07 references to `LLM07-001.png` and
 `LLM07-002.png` are preserved and marked unavailable in the baseline results.
 No evidence is fabricated or inferred.
 
 ## Source Preservation
 
-The source Markdown files under
-`C:\Users\madhu\Downloads\LLM_security` were copied and consolidated; the
-original files remain unchanged.
+The source Markdown files from the original external location were copied and
+consolidated; the original files remain unchanged.
 
 ## Promptfoo
 
@@ -151,7 +150,7 @@ manual security review.
 Start the ADK API server from the workspace root in the first terminal:
 
 ```powershell
-cd "C:\Users\madhu\OneDrive\Desktop\AI Agent\adk-workspace"
+cd adk-workspace   # repo root
 .\.venv\Scripts\Activate.ps1
 adk api_server --host 127.0.0.1 --port 8000
 ```
@@ -160,7 +159,7 @@ Start the mock malicious API in a second terminal (only needed for
 LLM01-004; safe to skip otherwise):
 
 ```powershell
-cd "C:\Users\madhu\OneDrive\Desktop\AI Agent\adk-workspace\llm_security\promptfoo-adk"
+cd llm_security\promptfoo-adk
 ..\..\.venv\Scripts\Activate.ps1
 python mock_malicious_api.py
 ```
@@ -168,7 +167,7 @@ python mock_malicious_api.py
 Run Promptfoo from a third terminal:
 
 ```powershell
-cd "C:\Users\madhu\OneDrive\Desktop\AI Agent\adk-workspace\llm_security\promptfoo-adk"
+cd llm_security\promptfoo-adk
 ..\..\.venv\Scripts\Activate.ps1
 npx promptfoo@latest eval -c promptfooconfig.yaml
 npx promptfoo@latest view
